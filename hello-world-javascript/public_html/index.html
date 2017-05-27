@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello world, JavaScript!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Hello world, JavaScript!</h1>
+
+            <label for="nome">Digite o seu nome:</label>
+            <input id="nome" name="nome" type="text" />
+            <br>
+            <button onclick="helloWorld()">Olá, mundo!</button>
+
+            <p>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+                   target="_blank">
+                    Referência
+                </a>
+            </p>
+        </div>
+        <script>
+            function helloWorld() {
+                var input = document.getElementById("nome");
+                var nome = input.value;
+                if (nome == '') {
+                    alert('Por favor informe o seu nome!');
+                } else {
+                    alert('Hello world, ' + nome + '!');
+                    input.value = '';
+                }
+            }
+        </script>
+    </body>
+</html>
